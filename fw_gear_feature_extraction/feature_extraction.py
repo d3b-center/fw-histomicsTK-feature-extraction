@@ -14,6 +14,13 @@ def get_path_features(path_to_mask, output_dir):
         # assign unique ID to each object (nucleus)
         im_label = skimage.measure.label(im_label)
 
+    # if the input is 3 channels, convert to 1 channel of IDs
+    if im_label.shape[-1] == 3:
+        red = im_label[:,:,0]
+        green = im_label[:,:,1]
+        blue = im_label[:,:,2]
+        im_label = (red * 65536) + (green * 256) + blue 
+
     # load corresponding images
     path_to_image = os.path.join(output_dir, 'hematoxylin.png')
     im_nuclei = skimage.io.imread(path_to_image)
