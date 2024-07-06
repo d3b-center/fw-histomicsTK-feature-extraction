@@ -9,4 +9,4 @@ This gear will generate pathomic features for an H&E image using HistomicsTK too
 
 ## Required inputs:
 - H&E image
-- nuclei segmentation image (binary or labeled)
+- nuclei segmentation image (binary or labeled; currently does not handle grayscale masks)
