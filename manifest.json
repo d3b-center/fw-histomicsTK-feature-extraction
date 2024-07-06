@@ -6,15 +6,15 @@
   "maintainer": "D3b-TIRU <flywheel@d3b.center>",
   "url": "https://github.com/DigitalSlideArchive/HistomicsTK",
   "source": "https://github.com/d3b-center/fw-histomicstk-feature-extraction/tree/main",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "license": "Apache-2.0",
   "custom": {
     "flywheel": {
       "suite": "HistomicsTK"
     },
     "gear-builder": {
-      "category": "utility",
-      "image": "chop.flywheel.io/histomicstk-feature-extraction:0.0.1"
+      "category": "analysis",
+      "image": "chop.flywheel.io/histomicstk-feature-extraction:0.0.3"
     }
   },
   "inputs": {

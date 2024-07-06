@@ -28,17 +28,17 @@ def run(client: CoreClient, gtk_context: GearToolkitContext):
         gtk_context (GearToolkitContext)
     """
     # get the Flywheel hierarchy for the run
-    destination_id = gtk_context.destination["id"]
-    hierarchy = get_analysis_run_level_and_hierarchy(gtk_context.client, destination_id)
-    acq_label = hierarchy['acquisition_label']
-    sub_label = hierarchy['subject_label']
-    ses_label = hierarchy['session_label']
-    project_label = hierarchy['project_label']
-    group_name = hierarchy['group']
+    # destination_id = gtk_context.destination["id"]
+    # hierarchy = get_analysis_run_level_and_hierarchy(gtk_context.client, destination_id)
+    # acq_label = hierarchy['acquisition_label']
+    # sub_label = hierarchy['subject_label']
+    # ses_label = hierarchy['session_label']
+    # project_label = hierarchy['project_label']
+    # group_name = hierarchy['group']
 
-    # get the output acqusition container
-    acq = fw.lookup(f'{group_name}/{project_label}/{sub_label}/{ses_label}/{acq_label}')
-    acq = acq.reload()
+    # # get the output acqusition container
+    # acq = fw.lookup(f'{group_name}/{project_label}/{sub_label}/{ses_label}/{acq_label}')
+    # acq = acq.reload()
 
     # get the input file
     CONFIG_FILE_PATH = '/flywheel/v0/config.json'
@@ -48,7 +48,7 @@ def run(client: CoreClient, gtk_context: GearToolkitContext):
     input_file_name = config['inputs']['input_image']['location']['path']
     input_label_file = config['inputs']['label_image']['location']['path']
 
-    output_dir = 'output/'
+    output_dir = '/flywheel/v0/output/'
 
     # run the main processes & upload output file back to acquisition
     print(f'Deconvolving: {input_file_name}')
