@@ -6,7 +6,7 @@
   "maintainer": "D3b-TIRU <flywheel@d3b.center>",
   "url": "https://github.com/DigitalSlideArchive/HistomicsTK",
   "source": "https://github.com/d3b-center/fw-histomicstk-feature-extraction/tree/main",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "Apache-2.0",
   "custom": {
     "flywheel": {
@@ -14,7 +14,7 @@
     },
     "gear-builder": {
       "category": "analysis",
-      "image": "chop.flywheel.io/histomicstk-feature-extraction:0.0.3"
+      "image": "chop.flywheel.io/histomicstk-feature-extraction:0.0.4"
     }
   },
   "inputs": {

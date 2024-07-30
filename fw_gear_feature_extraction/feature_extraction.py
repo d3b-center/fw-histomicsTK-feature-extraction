@@ -36,9 +36,9 @@ def get_path_features(path_to_mask, output_dir):
                                                     # haralick_features_flag=True)
     # rprops = skimage.measure.regionprops( im_label )
     # htk.features.compute_morphometry_features(im_label, rprops=rprops)
-    features = features.drop(columns=['Label', 'Identifier.Xmin', 'Identifier.Ymin', 'Identifier.Xmax', 'Identifier.Ymax', \
-                                    'Identifier.CentroidX', 'Identifier.CentroidY', \
-                                    'Identifier.WeightedCentroidX', 'Identifier.WeightedCentroidY'])
+    # features = features.drop(columns=['Label', 'Identifier.Xmin', 'Identifier.Ymin', 'Identifier.Xmax', 'Identifier.Ymax', \
+    #                                 'Identifier.CentroidX', 'Identifier.CentroidY', \
+    #                                 'Identifier.WeightedCentroidX', 'Identifier.WeightedCentroidY'])
 
     # save to disk
     features.to_csv(out_file_path, index=False)
