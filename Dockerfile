@@ -19,6 +19,7 @@ RUN pip install numpy==1.23.5
 COPY run.py manifest.json $FLYWHEEL/
 COPY fw_gear_feature_extraction ${FLYWHEEL}/fw_gear_feature_extraction 
 COPY ./ $FLYWHEEL/
+COPY compute_morphometry_features.py /usr/local/lib/python3.9/site-packages/histomicstk/features/compute_morphometry_features.py
 
 # start the pipeline
 RUN chmod a+x $FLYWHEEL/run.py
